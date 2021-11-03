@@ -12,10 +12,10 @@
  * @returns  {Object[]}
  */
 module.exports = function test2() {
-  let results;
+  //Import function to add 'example' property
+  const test1 = require('../test_1/index.js');
+  //Store filtered array returned by test1 function 
+  const result = test1().filter(object => object.last_name == "Simpson");
 
-  // Write your code here.  The pre-written lines above and below are just suggestions, feel free to delete
-  // them and start fresh.
-
-  return results;
+  return result;
 };

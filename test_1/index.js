@@ -11,10 +11,10 @@
  * @returns  {Object[]}
  */
 module.exports = function test1() {
-  let results;
+  //Import JSON array from file
+  let dataJson = require('./test_data.json');
+  //Add 'example' property for each individual object
+  dataJson.forEach((object, index) => dataJson[index].example = `${object.first_name} ${object.last_name} says ${object.catchphrase}`);
 
-  // Write your code here.  The pre-written lines above and below are just suggestions, feel free to delete
-  // them and start fresh.
-
-  return results;
+  return dataJson;
 };
